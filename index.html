@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE.WEAR - Rework. Reuse. Rebel.</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['Dancing Script', 'cursive'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#2563eb', // Biru aksen
+                            dark: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Efek paralaks sederhana */
+        .hero-section {
+            background-attachment: fixed;
+        }
+
+        /* Custom styling untuk gambar produk */
+        .product-image-container {
+            overflow: hidden;
+        }
+        
+        .product-image-container img {
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image-container img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <nav class="bg-black/90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-2xl font-black text-white tracking-tighter">RE.<span class="text-blue-600">WEAR</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#misi" class="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Misi</a>
+                <a href="#nilai" class="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Nilai</a>
+                <a href="#produk" class="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Koleksi</a>
+                <a href="#kontak" class="bg-white text-black px-6 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">Temukan Kami</a>
+            </div>
+            
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white hero-section" 
+            style="background-image: url(Image/S__14737416.jpg); background-size: cover; background-position: center;">
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
+
+        <div class="relative z-10 px-6 max-w-4xl mx-auto">
+            <h1 class="text-7xl md:text-9xl font-black mb-2 tracking-tighter">RE.WEAR</h1>
+            <p class="text-2xl md:text-3xl font-light text-gray-300 mb-8 font-script text-blue-400">Rework. Reuse. Rebel.</p>
+            <p class="text-lg text-gray-300 mb-10 max-w-xl mx-auto leading-relaxed">
+                
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#produk" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition-all transform hover:scale-105">Lihat Koleksi</a>
+                <a href="#misi" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-black transition-all">Tentang Kami</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="misi" class="py-24 bg-black border-b border-gray-900">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">Memutus Lingkaran <br><span class="text-blue-600">Fashion Waste</span></h2>
+                <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                    Fast fashion is a big <strong>NO</strong>. Kita gak bikin limbah baru, tapi nyelamatin yang tersisa.
+                </p>
+                <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                    Tiap <em>piece</em> itu <strong>1-of-1</strong>, hasil dekonstruksi jadi <em>wearable art</em> yang <em>valid</em>. <span class="text-white font-bold">No restock, pure statement.</span>
+                </p>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-blue-600/20 rounded-lg blur-lg"></div>
+                <img src="Image/REWEAR.png-removebg-preview - Shortcut.lnk" alt="Fashion Rework Process" class="relative rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+            </div>
+        </div>
+    </section>
+
+    <section id="nilai" class="py-24 bg-zinc-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core Values</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-black p-8 border border-gray-800 hover:border-blue-600 transition-colors group">
+                    <div class="text-blue-600 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">♻</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Reuse</h3>
+                    <p class="text-gray-500 text-sm">Memperpanjang umur pakaian dan memberi mereka kehidupan kedua yang lebih layak.</p>
+                </div>
+                <div class="bg-black p-8 border border-gray-800 hover:border-blue-600 transition-colors group">
+                    <div class="text-blue-600 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🛠</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Repair</h3>
+                    <p class="text-gray-500 text-sm">Memperbaiki apa yang rusak dengan teknik kreatif, bukan membuangnya ke tanah.</p>
+                </div>
+                <div class="bg-black p-8 border border-gray-800 hover:border-blue-600 transition-colors group">
+                    <div class="text-blue-600 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">✂</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Recycle</h3>
+                    <p class="text-gray-500 text-sm">Mengolah kembali bahan lama menjadi material baru untuk menciptakan tekstur unik.</p>
+                </div>
+                <div class="bg-black p-8 border border-gray-800 hover:border-blue-600 transition-colors group">
+                    <div class="text-blue-600 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">♥</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Relove</h3>
+                    <p class="text-gray-500 text-sm">Mencintai kembali pakaian lama dengan tampilan baru yang lebih segar dan edgy.</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section id="produk" class="py-24 bg-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 pb-6 border-b border-gray-800">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
+                        Our Latest <br> <span class="font-script text-blue-500">Artworks</span>
+                    </h2>
+                </div>
+                <div class="mt-6 md:mt-0 text-right">
+                    <p class="text-gray-400 max-w-md ml-auto">
+                        Koleksi terbatas. Setiap goresan, jahitan, dan tambalan menceritakan kisah yang berbeda. Tidak ada dua item yang sama.
+                    </p>
+                    <a href="https://www.instagram.com/rewear.estudio?igsh=M3A3bmF4bGRvYjRt" class="inline-block mt-4 text-blue-500 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest group">
+                        Lihat Semua Koleksi <span class="inline-block transition-transform group-hover:translate-x-2">→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="product-card group cursor-pointer">
+                    <div class="product-image-container rounded-xl mb-4 bg-gray-800 aspect-[3/4] relative">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20"></span>
+                        <img src="Image/S__14737412_0.jpg" alt="Reworked Denim" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="bg-white text-black px-6 py-2 rounded-full font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold group-hover:text-blue-500 transition-colors">Patchwork Denim Jacket</h3>
+                    <p class="text-gray-500 text-sm mt-1"></p>
+                    <p class="text-white font-bold mt-2">IDR 150.000</p>
+                </div>
+
+                <div class="product-card group cursor-pointer mt-0 md:mt-12 lg:mt-0"> 
+                    <div class="product-image-container rounded-xl mb-4 bg-gray-800 aspect-[3/4] relative">
+                        <span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20">NEW DROP</span>
+                        <img src="Image/S__14737413_0.jpg" alt="Custom Hoodie" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="bg-white text-black px-6 py-2 rounded-full font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold group-hover:text-blue-500 transition-colors">Reconstructed Hoodie</h3>
+                    <p class="text-gray-500 text-sm mt-1">Request from Mr. A</p>
+                    <p class="text-white font-bold mt-2">IDR 100.000</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-24 bg-gradient-to-b from-zinc-900 to-black text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8">Join the <span class="text-blue-600">Rebellion</span></h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+                Kami tidak hanya menjual pakaian, kami membangun komunitas. Temukan kami di media sosial atau kunjungi pop-up store terdekat.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="https://www.instagram.com/rewear.estudio?igsh=M3A3bmF4bGRvYjRt" class="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-600 hover:text-white transition-all w-full md:w-auto border border-white">
+                    Instagram Shop
+                </a>
+                <a href="#" class="bg-transparent border border-gray-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:border-white transition-all w-full md:w-auto">
+                    Tokopedia / Shopee
+                </a>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-gray-800">
+                <p class="text-gray-500 text-sm">
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-12 border-t border-gray-900">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="text-2xl font-black text-white tracking-tighter">RE.<span class="text-blue-600">WEAR</span></p>
+                <p class="text-xs mt-2">Fashion Berkelanjutan untuk Bumi yang Lebih Baik.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <div class="mt-4 md:mt-0 text-sm">
+                &copy; 2025 RE.WEAR Corp.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
